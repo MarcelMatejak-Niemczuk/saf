@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy Ivan Drago wygra walke?</title>
+</head>
+<body>
+    <label for="pole">Wpisz siłe ciosu</label><br>
+    <input type="text" id="pole">
+    <input type="submit" value="Sprawdz" onclick="Sprawdz()">
+    <div id="wynik"></div>
+
+    <script>
+
+        function Sprawdz() {
+
+            let liczba = document.getElementById("pole").value;
+
+            if (liczba=="") {
+                alert("Podaj wartość - bez tego nie ma walki.")
+            }
+            else if (liczba<30) document.getElementById("wynik").innerHTML="Za słaby cios - Rocky nawet tego nie poczuł.";
+            else if (liczba >= 30 && liczba <=69) document.getElementById("wynik").innerHTML="Walka wyrównana - Drago nadal groźny.";
+            else if (liczba >= 70 && liczba <=99) document.getElementById("wynik").innerHTML="Mocny cios - Drago ma przewagę.";
+            else if (liczba = 100 && liczba > 100) document.getElementById("wynik").innerHTML="IF HE DIES, HE DIES - Drago wygrywa walkę.";
+            else document.getElementById("wynik").innerHTML = Number.isNaN(liczba);            
+            
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>
